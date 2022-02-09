@@ -1,5 +1,3 @@
-from django.shortcuts import render
-
 # User Views API
 from rest_framework.views import APIView
 from rest_framework.response import Response

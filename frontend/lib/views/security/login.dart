@@ -1,13 +1,11 @@
 import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import './login_data.dart';
 
 class Login extends StatelessWidget {
    Login({ Key? key }) : super(key: key);
  final _login = TextEditingController();
  final _password = TextEditingController();
-
-
 
 
   @override
@@ -38,13 +36,18 @@ class Login extends StatelessWidget {
                             labelText: "Password",
                           ),
                     ),
-                  ),         
-                  OutlinedButton(
-                    child: const Text('Log In'),
-                    onPressed: (() =>{
-                      log('hello world')
-                    } ),
-              )],
+                  ),
+                  const SizedBox(height: 20,),
+                  SizedBox(
+                    width: 120,
+                    child: OutlinedButton(
+                      child: const Text('Log In'),
+                      onPressed: (() => {
+                        loginToApi(_login, _password, context)
+                      }),
+              ),
+                  )
+              ],
             )
            ],
         ),
