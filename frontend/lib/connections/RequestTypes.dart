@@ -1,6 +1,4 @@
 import 'dart:developer';
-import 'dart:math';
-
 import '../database/db.dart';
 import './BasicUrl.dart';
 import 'package:http/http.dart' as http;
@@ -33,7 +31,7 @@ Future<http.StreamedResponse> postRequest({required String apiUrl, required Map<
 
 
 Future<http.StreamedResponse> apiRequestWithPassword(String username, String password)async{
-  var request = http.MultipartRequest('POST', Uri.parse('$rootApi/api-token-auth/'));
+  var request = http.MultipartRequest('POST', Uri.parse('http://localhost:8000/api-token-auth/'));
 
   request.fields.addAll({
     'username': username,

@@ -6,19 +6,25 @@ class Index extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title:const Text('Simple fronend Flutter'),
-        actions: [
-            ElevatedButton(
-              onPressed: ()=>{
-                Navigator.pushNamed(context, '/login_area')
-              },
-               child: const Text('Login'))
+      body: SafeArea(
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Text('Company Code'),
+                TextButton(
+                    onPressed: ()=>{
+                      Navigator.pushNamed(context, '/login_area')
+                    },
+                    child: Text('Login'),
+                )
+              ],
+            ),
           ],
         ),
-      body: const SafeArea(
-        child: Text('public Area'),
       ),
     );
   }
 }
+
+

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       routes: {
         "/":(context) => const Index(),
         "/login_area":(context) =>  Login(),
-        "/user_area":(context) => const UserArea(),
+        "/user_area":(context) => UserArea(),
       },
     );
   }
